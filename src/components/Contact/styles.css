@@ -1,0 +1,48 @@
+#container {
+    width: 400px;
+    background-color: antiquewhite;
+    padding: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+ul,li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.list {
+    margin: 15px 0;
+}
+
+.list > li {
+    background-color: coral;
+    padding: 5px;
+    margin-bottom: 2px;
+}
+
+.listGuide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.btn button {
+    padding: 5px;
+    background-color: coral;
+    width: 60px;
+
+}
