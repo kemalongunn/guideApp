@@ -4,9 +4,12 @@ function List({ contacts }) {
   const [filterText, setFilterText] = useState("");
 
   const filtered = contacts.filter((item) => {
-    return Object.keys(item).some((key) => 
-        item[key].toString().toLowerCase().includes(filterText.toLocaleLowerCase())
-     );
+    return Object.keys(item).some((key) =>
+      item[key]
+        .toString()
+        .toLowerCase()
+        .includes(filterText.toLocaleLowerCase())
+    );
   });
 
   return (
@@ -18,16 +21,13 @@ function List({ contacts }) {
       ></input>
       <ul className="list">
         {filtered.map((contact, i) => (
-          <li className="listGuide" key={i}> 
-          <span> {contact.fullname} </span>
-          <span> {contact.phone_number} </span>
-
+          <li className="listGuide" key={i}>
+            <span> {contact.fullname} </span>
+            <span> {contact.phone_number} </span>
           </li>
         ))}
       </ul>
-      <p>
-      Total guide ({filtered.length})
-      </p>
+      <p>Total guide ({filtered.length})</p>
     </div>
   );
 }
